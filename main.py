@@ -176,5 +176,4 @@ def get_game_stats(date: Union[datetime.date, None] = None, country: str = None,
             .filter(UserSessions.duration_seconds > 0)
             .scalar()
         )
-    print(average_time_spent)
     return GameStats(daily_active_users=daily_users, number_of_logins=num_of_logins, total_revenue=total_revenue, number_paid_users=paid_users, avg_num_of_sessions=avg_sessions, avg_total_time_spent=average_time_spent)
